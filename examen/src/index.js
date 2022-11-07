@@ -5,11 +5,10 @@ import Formulario from "./components/Formulario"
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const App = () => {
-  return (    
+  return ( 
     <>
       <Formulario/>
     </>
-
   );
 }
  

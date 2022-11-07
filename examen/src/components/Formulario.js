@@ -5,7 +5,7 @@ import Boton from "../styles/boton"
 
 const Formulario = () => {
     const[moneda1, setMoneda1] = useState("MXN");
-    const[moneda2, setMoneda2] = useState("USD");
+    const[moneda2, setMoneda2] = useState("EUR");
     const[valor1, setValor1] = useState(0);
     const[resultado, setResultado] = useState(0);
 
@@ -26,6 +26,9 @@ const Formulario = () => {
             if(moneda2 === "DOGE"){
                 setResultado(valor1*0.85)
             }
+            else if(moneda1 === moneda2){
+                setResultado(valor1);
+            }
         }
         else if(moneda1 === "USD"){
             if(moneda2 === "MXN"){
@@ -42,6 +45,9 @@ const Formulario = () => {
             }
             if(moneda2 === "DOGE"){
                 setResultado(valor1*16.89)
+            }
+            else if(moneda1 === moneda2){
+                setResultado(valor1);
             }
         }
         else if(moneda1 === "EUR"){
@@ -60,6 +66,9 @@ const Formulario = () => {
             if(moneda2 === "DOGE"){
                 setResultado(valor1*16.67)
             }
+            else if(moneda1 === moneda2){
+                setResultado(valor1);
+            }
         }
         else if(moneda1 === "BTC"){
             if(moneda2 === "MXN"){
@@ -76,6 +85,9 @@ const Formulario = () => {
             }
             if(moneda2 === "DOGE"){
                 setResultado(valor1*326420.79)
+            }
+            else if(moneda1 === moneda2){
+                setResultado(valor1);
             }
         }
         else if(moneda1 === "ETH"){
@@ -94,6 +106,9 @@ const Formulario = () => {
             if(moneda2 === "DOGE"){
                 setResultado(valor1*22609.05)
             }
+            else if(moneda1 === moneda2){
+                setResultado(valor1);
+            }
         }
         else if(moneda1 === "DOGE"){
             if(moneda2 === "MXN"){
@@ -110,6 +125,9 @@ const Formulario = () => {
             }
             if(moneda2 === "ETH"){
                 setResultado(valor1*0.000044)
+            }
+            else if(moneda1 === moneda2){
+                setResultado(valor1);
             }
         }
       });
@@ -161,7 +179,7 @@ const Formulario = () => {
             </div>
         </div>
         <div>
-            <Texto alinear="left" tamaño="0.8 rem"> Moneda 1 </Texto>
+            <Texto alinear="left" tamaño="0.8 rem"> Moneda 2 </Texto>
             <div>
                 <select id="moneda2" name="moneda2" value={moneda2} onChange={onChange}>
                     <option value="MXN">MXN</option>
